@@ -1,0 +1,161 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 36,
+  "margin": 3,
+  "spacing": 6,
+  "exclusive": true,
+  "fixed-center": true,
+  "reload_style_on_change": true,
+  "modules-left": [ 
+    "clock",
+    "sway/window",
+    "mpris"
+  ],
+  "modules-center": [
+    "sway/workspaces"
+  ],
+  // potentially replace backlight/slider with standard backlight module and add scrolling response
+  "modules-right": [
+    "tray",
+    "privacy",
+    "network",
+    "battery",
+    "backlight",
+    "wireplumber"
+  ],
+  // modules-right 
+  "privacy": {
+    "icon-spacing": "4",
+    "icon-size": "8",
+    "transition-duration": "100",
+    "modules": [
+      {
+        "type": "audio-in",
+        "tooltip": true,
+        "tooltip-icon-size": "8"
+      },
+      {
+        "type": "screenshare",
+        "tooltip": true,
+        "tooltip-icon-size": "8"
+      }
+    ]
+  },
+  "network": {
+    "interface": "wlan0",
+    "interval": "120",
+    "family": "ipv4",
+    "format-wifi": "{essid} {signaldBm}dBm  ",
+    "format-disconnected": "Disconnected"
+  },
+  /*"bluetooth": {
+    "format-connected": "{num_connections}",
+    "format-on": "",
+    "format-off": "",
+    "format-disabled": "",
+    "tooltip": true,
+    "tooltip-format-connected": "{device_enumerate}"
+  },*/
+  "battery": {
+    "bat": "BAT1",
+    "interval": "60",
+    "format": "{capacity}% {icon}",
+    "format-time": "{H}h {m}m {M}min",
+    "format-icons": [" "," "," "," "," "],
+    "states": {
+      "full": 100,
+      "high": 80,
+      "medium": 60,
+      "low": 40,
+      "critical": 20
+    }
+  },
+  "backlight": {
+    "format": "{percent}%  "
+  },
+  "backlight/slider": {
+    "min": "5",
+    "max": "80",
+    "orientation": "horizontal",
+    "backlight": "amdgpu_bl2"
+  },
+  "wireplumber": {
+    "max-volume": "125",
+    "scroll-step": "0.5",
+    "format": "{volume}% {icon}",
+    "format-icons": [" "," "," "," "], 
+    "states": {
+      "high": 100,
+      "medium": 60,
+      "low": 20,
+      "muted": 0
+    }
+  },
+  "tray": {
+    "icon-size": "20",
+    "spacing": "4",
+    "show-passive-items": true
+  },
+  // modules-center
+  "sway/workspaces": {
+    "disable-scroll": true,
+    "disable-click": true,
+    "persistent-workspaces": {
+      "1": ["eDP-2"],
+      "2": ["eDP-2"],
+      "3": ["eDP-2"],
+      "4": ["eDP-2"],
+      "5": ["eDP-2"],
+      "6": ["eDP-2"],
+      "7": ["eDP-2"]
+    },
+    "format": "{icon}",
+    "format-icons": {
+      "1": " ",
+      "2": "",
+      "3": " ",
+      "4": "",
+      "5": "",
+      "6": " ",
+      "7": " "
+    }
+  },
+// potentially replace backlight/slider with standard backlight module and add scrolling response
+// modules_left
+  "clock": {
+    "interval": "60",
+    "format": "  {:%I:%M %p}",
+    "timezone": "America/New_York",
+    "calendar": {
+      "mode":"month",
+      "week-pos": "right"
+    }
+  },
+  "sway/window": {
+    "format": "  {title}",
+    "max-length": "40",
+    "on-click": "focus",
+    "rewrite": {
+      "(.*)Mozilla Firefox": "  Firefox",
+      "(.*)Tidal(.*)": "  Tidal",
+      "(.*)foot": "  Terminal"
+    }
+  },
+  "mpris": {
+    "format": "  {dynamic}",
+    "player": "tidal-hifi",
+    "interval": "60",
+    "dynamic-order": [
+      "title",
+      "artist",
+      "length"
+    ],
+    "dynamic-importance-order": [
+      "length",
+      "artist",
+      "title"
+    ],
+    "dynamic-len": "10"
+  }
+}

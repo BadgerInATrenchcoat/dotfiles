@@ -1,0 +1,89 @@
+* {
+  border: none; 
+  font-family: "JetBrains Mono", Arial;
+  font-size: 12px;
+  min-height: 0px;
+  border-radius: 14px;
+}
+window#waybar {
+  background-color: transparent;;
+}
+#clock, 
+#mpris,
+#privacy, 
+#network, 
+#battery, 
+#backlight,
+#window,
+#wireplumber, 
+#tray,
+#battery {
+  padding: 0px 12px;
+  background-color: #293241;
+  color: #e0fbfc;
+  text-shadow: 0px 0px 2px #98c1d9; 
+}
+window#waybar.empty #window {
+  padding: 0px; 
+  margin: 0px;
+  border: 0px;
+  opacity: 0.0;
+}
+#network.disconnected {
+  color: #d1655e;
+}
+#workspaces {
+  min-height: 30px;
+  border-style: solid;
+  background-color: #293241;
+} 
+#workspaces button { 
+  color: #e0fbfc;
+  min-width: 24px;
+  margin: 0px 0px;
+  padding: 0 16px;
+  text-shadow: 0px 0px 2px #98c1d9;
+}
+#workspaces button.visible {
+  border-style: solid;
+  border-color: #293241;
+  background-color: #4c566a;
+  min-width: 16px;
+  padding: 0px 20px;
+}
+#battery.full {
+  color: #3b9953;
+}
+#battery.high {
+  color: #abcd32;
+}
+#battery.medium {
+  color: #f9de00;
+}
+#battery.warning {
+  color: #f98106;
+}
+#battery.critical {
+  background-color: #e02000;
+}
+
+#backlight-slider {
+  padding: 0px 6px;
+}
+#backlight-slider trough {
+  background-color: #293241;
+  min-height: 34px;
+  min-width: 100px;
+}
+#backlight-slider slider {
+  background-color: #3d5a80;
+  min-height: 0px;
+  margin: 0px 0px;
+}
+#backlight-slider highlight {
+  margin: 4px 4px;
+  background-color: #98c1d9;
+  min-width: 0px;
+  min-height: 18px;
+  border-radius: 10px;
+}
