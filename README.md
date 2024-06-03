@@ -15,9 +15,8 @@ Below are a series of specific and modular dependencies for the different parts 
 ## Installation
 
 ```
-git clone <URL>
+git clone https://github.com/pika-colony/dotfiles
 ```
 
 ## Credits
 
-Kvantum Theme: https://github.com/HimDek/Utterly-Nord-Plasma
