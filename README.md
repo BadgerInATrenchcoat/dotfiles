@@ -19,4 +19,5 @@ git clone https://github.com/pika-colony/dotfiles
 ```
 
 ## Credits
-
+Kickstart.nvim: https://github.com/nvim-lua/kickstart.nvim
+Nord Nvim Theme: https://github.com/shaunsingh/nord.nvim
