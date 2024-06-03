@@ -29,4 +29,4 @@ source  /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.z
 #alias "tidal-hifi"="tidal-hifi --ozone-platform=wayland --enable-features=TouchpadOverscrollHistoryNavigation"
 #alias "signal"="signal-desktop --enable-features=UseOzonePlatform --ozone-platform=wayland"
 alias "ls"="ls --color -al"
-source /home/user/.config/broot/launcher/bash/br
+source $HOME/.config/broot/launcher/bash/br
