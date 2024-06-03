@@ -1,0 +1,17 @@
+font="JetBrains Mono"
+font-size=48
+indicator-radius=230
+indicator-thickness=10
+separator-color=00000000
+inside-color=29324100
+inside-ver-color=f9de0000
+inside-wrong-color=e0200000
+ring-color=292e39
+ring-clear-color=f9de00
+ring-ver-color=facb00
+ring-wrong-color=di655e
+text-color=e0fbfc
+text-clear-color=e0fbfc
+text-ver-color=facb00
+text-wrong-color=di655e
+key-hl-color=4c566a
