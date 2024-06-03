@@ -1,0 +1,31 @@
+* {
+  outline: none;
+}
+window {
+  font-family: "JetBrains Mono", Arial;
+}
+#outer-box {
+  background-color: #293241;
+}
+#entry,
+#input:focus {
+  background-color: #293241;
+  color: #e0fbfc;
+  text-shadow: 0px 0px 2px #98c1d9;
+}
+#text,
+#input {
+  color: #e0fbfc;
+}
+#input {
+  border: solid 10px #293241;
+  background-color: #293241;
+}
+#entry:selected {
+  background-color: #3b4252;
+}
+#input:focus {
+  outline: none;
+  box-shadow: none;
+}
+

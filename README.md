@@ -17,3 +17,7 @@ Below are a series of specific and modular dependencies for the different parts 
 ```
 git clone <URL>
 ```
+
+## Credits
+
+Kvantum Theme: https://github.com/HimDek/Utterly-Nord-Plasma
