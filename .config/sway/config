@@ -35,7 +35,7 @@ set $menu wofi -S run -l top -y 10 -W 600 -H 300 | xargs swaymsg exec --
 exec --no-startup-id gnome-keyring-daemon --start --components=pkcs11,secrets,ssh
 
 exec swayidle -w \
-timeout 120 "output * power off" resume "output * power off" \
+#timeout 120 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
 timeout 150 "swaylock -e -f -F -r -K -l -i $HOME/Pictures/.wallpapers/wave.png -C $HOME/.config/swaylock/config"
 
 #timeout 150 'swaylock --font "JetBrains Mono" --font-size 48 --ignore-empty-password --line-uses-ring --show-failed-attempts --hide-keyboard-layout --indicator-caps-lock --indicator-radius 230 --indicator-thickness 10 --separator-color 00000000 --inside-color 29324100 --inside-ver-color f9de0000 --inside-wrong-color e0200000 --ring-color 292e39 --ring-clear-color f9de00 --ring-ver-color facb00 --ring-wrong-color di655e --text-color e0fbfc --text-clear-color e0fbfc --text-ver-color facb00 --text-wrong-color di655e --key-hl-color 4c566a --scaling fill --image $HOME/Pictures/.wallpapers/wave.png'
