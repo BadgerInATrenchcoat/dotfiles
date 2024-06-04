@@ -11,18 +11,18 @@ bar {
 # Set screen resolution and wallpaper
 output eDP-2 mode 2880x1800 pos 0 0 scale 1.5 bg ~/Pictures/.wallpapers/atsea.png fill
 # Basic navigation
-set $left j
-set $down k
-set $up l
-set $right semicolon
+set $left h
+set $down j
+set $up k
+set $right l
 # Screenshot
 bindsym $mod+Tab exec grim -g "$(slurp)" - | swappy -f -
 # Screen idle + Screensaver
 exec swayidle -w \
-timeout 90 'set brightness $(brightnessctl --device=amdgpu_bl2 i | grep -oE "[0-9]?[0-9]%") && brightnessctl --device=amdgpu_bl2 set 5%' resume 'brightnessctl --device=amdgpu_bl2 set "$brightness"' \
-timeout 120 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-timeout 150 'swaylock -e -f -F -r -K -l -i $HOME/Pictures/.wallpapers/wave.png -C $HOME/.config/swaylock/config' \
-before-sleep 'swaylock -e -f -F -r -K -l -i $HOME/Pictures/.wallpapers/wave.png -C $HOME/.config/swaylock/config'
+  timeout 60 'brightnessctl --device=amdgpu_bl2 -s && brightnessctl --device=amdgpu_bl2 set 5%' resume 'brightnessctl --device=amdgpu_bl2 -r' \
+  timeout 120 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+  timeout 180 'swaylock -e -f -F -r -K -l -i $HOME/Pictures/.wallpapers/wave.png -C $HOME/.config/swaylock/config' \
+  before-sleep 'swaylock -e -f -F -r -K -l -i $HOME/Pictures/.wallpapers/wave.png -C $HOME/.config/swaylock/config'
 # Set window gaps
 gaps inner 10
 # Remove window titlebars
