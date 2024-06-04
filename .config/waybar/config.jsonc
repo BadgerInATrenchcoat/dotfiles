@@ -81,15 +81,16 @@
     "backlight": "amdgpu_bl2"
   },
   "wireplumber": {
-    "max-volume": "125",
+    "max-volume": "100",
     "scroll-step": "0.5",
     "format": "{volume}% {icon}",
+    "format-muted": "",
     "format-icons": [" "," "," "," "], 
     "states": {
       "high": 100,
       "medium": 60,
       "low": 20,
-      "muted": 0
+      "off": 1 
     }
   },
   "tray": {

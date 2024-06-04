@@ -28,6 +28,8 @@ window#waybar.empty #window {
   margin: 0px;
   border: 0px;
   opacity: 0.0;
+  min-width: 0px;
+  font-size: 0px;
 }
 #network.disconnected {
   color: #d1655e;
@@ -86,4 +88,8 @@ window#waybar.empty #window {
   min-width: 0px;
   min-height: 18px;
   border-radius: 10px;
+}
+#wireplumber.muted {
+  color: #d1655e;
+  text-shadow: 0px 0px 2px #e02000; 
 }
