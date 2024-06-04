@@ -18,10 +18,11 @@ set $right semicolon
 # Screenshot
 bindsym $mod+Tab exec grim -g "$(slurp)" - | swappy -f -
 # Screen idle + Screensaver
-#exec swayidle -w \
-#timeout 180 'swaylock -f -c ffffff' \
-#timeout 120 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-#before-sleep 'swaylock -f -c 000000'
+exec swayidle -w \
+timeout 90 'set brightness $(brightnessctl --device=amdgpu_bl2 i | grep -oE "[0-9]?[0-9]%") && brightnessctl --device=amdgpu_bl2 set 5%' resume 'brightnessctl --device=amdgpu_bl2 set "$brightness"' \
+timeout 120 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+timeout 150 'swaylock -e -f -F -r -K -l -i $HOME/Pictures/.wallpapers/wave.png -C $HOME/.config/swaylock/config' \
+before-sleep 'swaylock -e -f -F -r -K -l -i $HOME/Pictures/.wallpapers/wave.png -C $HOME/.config/swaylock/config'
 # Set window gaps
 gaps inner 10
 # Remove window titlebars
@@ -33,12 +34,12 @@ client.unfocused #2e3440 #2e3440 #2e3440
 set $menu wofi -S run -l top -y 10 -W 600 -H 300 | xargs swaymsg exec --
 # Initialize GNOME Keyring
 exec --no-startup-id gnome-keyring-daemon --start --components=pkcs11,secrets,ssh
-
-exec swayidle -w \
-#timeout 120 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-timeout 150 "swaylock -e -f -F -r -K -l -i $HOME/Pictures/.wallpapers/wave.png -C $HOME/.config/swaylock/config"
-
-#timeout 150 'swaylock --font "JetBrains Mono" --font-size 48 --ignore-empty-password --line-uses-ring --show-failed-attempts --hide-keyboard-layout --indicator-caps-lock --indicator-radius 230 --indicator-thickness 10 --separator-color 00000000 --inside-color 29324100 --inside-ver-color f9de0000 --inside-wrong-color e0200000 --ring-color 292e39 --ring-clear-color f9de00 --ring-ver-color facb00 --ring-wrong-color di655e --text-color e0fbfc --text-clear-color e0fbfc --text-ver-color facb00 --text-wrong-color di655e --key-hl-color 4c566a --scaling fill --image $HOME/Pictures/.wallpapers/wave.png'
+# Bindings for bringness function-row keys
+bindsym XF86KbdBrightnessUp exec brightnessctl --device=asus::kbd_backlight set +1
+bindsym XF86KbdBrightnessDown exec brightnessctl --device=asus::kbd_backlight set 1-
+bindsym XF86MonBrightnessUp exec brightnessctl --device=amdgpu_bl2 set +2% 
+bindsym XF86MonBrightnessDown exec brightnessctl --device=amdgpu_bl2 set 2%- 
+bindsym XF86Launch3 exec asusctl led-mode -n
 
 ## END CUSTOM ##
 
