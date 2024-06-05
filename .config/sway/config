@@ -28,8 +28,8 @@ gaps inner 10
 # Remove window titlebars
 default_border pixel 2
 exec border pixel 2
-client.focused #4c566a #4c566a #4c566a
-client.unfocused #2e3440 #2e3440 #2e3440
+client.focused #5e81ac #5e81ac #5e81ac
+client.unfocused #4c556a #4c556a #4c556a
 # Set wofi as the default application launcher
 set $menu wofi -S run -l top -y 10 -W 600 -H 300 | xargs swaymsg exec --
 # Initialize GNOME Keyring
