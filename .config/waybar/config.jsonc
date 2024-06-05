@@ -85,12 +85,11 @@
     "scroll-step": "0.5",
     "format": "{volume}% {icon}",
     "format-muted": "",
-    "format-icons": [" "," "," "," "], 
+    "format-icons": [" "," "," "], 
     "states": {
       "high": 100,
       "medium": 60,
-      "low": 20,
-      "off": 1 
+      "low": 20, 
     }
   },
   "tray": {
@@ -125,8 +124,9 @@
 // potentially replace backlight/slider with standard backlight module and add scrolling response
 // modules_left
   "clock": {
-    "interval": "60",
+    "interval": "1",
     "format": "  {:%I:%M %p}",
+    "tooltip-format": "{:%r %a %b %d %Y}",
     "timezone": "America/New_York",
     "calendar": {
       "mode":"month",
