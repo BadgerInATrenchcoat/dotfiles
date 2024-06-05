@@ -1,6 +1,8 @@
 # Set default editor to nvim
 export EDITOR="nvim"
 export GIT_EDITOR="nvim"
+export VISUAL="nvim"
+export PAGER="less"
 # Force QT apps to Wayland
 export QT_QPA_PLATFORM="wayland"
 # Colors for common commands
