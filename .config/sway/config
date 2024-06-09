@@ -34,7 +34,14 @@ client.unfocused #4c556a #4c556a #4c556a
 set $menu wofi -S drun -l top -y 10 -W 600 -H 300 | xargs swaymsg exec --
 # Initialize GNOME Keyring
 exec --no-startup-id gnome-keyring-daemon --start --components=pkcs11,secrets,ssh
-
+# Floating Windows
+for_window [app_id="Tor Browser"] floating enable
+for_window [app_id="Mullvad Browser"] floating enable
+# Touchpad Settings
+input "2362:12305:ASUP1208:00_093A:3011_Touchpad" {
+  tap enabled
+  natural_scroll enabled
+}
 # Key bindings 
 ## F/Macro keys
 ### Screen Brightness
@@ -49,14 +56,11 @@ bindsym XF86AudioRaiseVolume exec wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5
 bindsym XF86AudioLowerVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
 bindsym XF86AudioMute exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
 bindsym XF86AudioMicMute exec wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
-### Media Control
+## Media Control
 bindsym Menu+Home exec playerctl previous
 bindsym Menu+Prior exec playerctl play
 bindsym Menu+Next exec playerctl pause
 bindsym Menu+End exec playerctl next
-##
-for_window [app_id="Tor Browser"] floating enable
-for_window [app_id="Mullvad Browser"] floating enable
 ## END CUSTOM ##
 
 
@@ -65,21 +69,6 @@ for_window [app_id="Mullvad Browser"] floating enable
 set $term foot
 ### Input configuration
 #
-# Example configuration:
-#
-#   input "2:14:SynPS/2_Synaptics_TouchPad" {
-#       dwt enabled
-#       tap enabled
-#       natural_scroll enabled
-#       middle_emulation enabled
-#   }
-#
-# You can get the names of your inputs by running: swaymsg -t get_inputs
-# Read `man 5 sway-input` for more information about this section.
-input "2362:12305:ASUP1208:00_093A:3011_Touchpad" {
-  tap enabled
-  natural_scroll enabled
-}
 ### Key bindings
 #
 # Basics:
