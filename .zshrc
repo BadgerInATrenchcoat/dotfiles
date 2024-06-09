@@ -39,13 +39,15 @@ source $HOME/.config/broot/launcher/bash/br
 alias tput="trashy put"
 alias tls="trashy list"
 alias tres="trashy restore -r "
-alias cat="bat -f --tabs 2"
+alias cat="bat --tabs 2"
+alias ll="ls -al"
 ## Colorize common commands
 alias diff="diff --color=auto"
-alias ls="ls --color -al"
+alias ls="ls --color"
 alias grep="grep --color=auto"
 alias ip="ip -color=auto"
 alias zrl="source $HOME/.zshrc && source $HOME/.zshenv"
+alias m="neomutt"
 # Display command execution time next to prompt
 function preexec() {
   timer=$(date +%s%3N)
