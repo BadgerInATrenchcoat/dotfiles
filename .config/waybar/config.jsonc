@@ -26,37 +26,29 @@
   ],
   // modules-right 
   "privacy": {
-    "icon-spacing": "4",
-    "icon-size": "8",
-    "transition-duration": "100",
+    "icon-spacing": 4,
+    "icon-size": 8,
+    "transition-duration": 100,
     "modules": [
       {
         "type": "audio-in",
         "tooltip": true,
-        "tooltip-icon-size": "8"
+        "tooltip-icon-size": 8
       },
       {
         "type": "screenshare",
         "tooltip": true,
-        "tooltip-icon-size": "8"
+        "tooltip-icon-size": 8
       }
     ]
   },
   "network": {
     "interface": "wlan0",
-    "interval": "120",
+    "interval": 120,
     "family": "ipv4",
     "format-wifi": "{essid} {signaldBm}dBm  ",
     "format-disconnected": "Disconnected"
   },
-  /*"bluetooth": {
-    "format-connected": "{num_connections}",
-    "format-on": "",
-    "format-off": "",
-    "format-disabled": "",
-    "tooltip": true,
-    "tooltip-format-connected": "{device_enumerate}"
-  },*/
   "battery": {
     "bat": "BAT1",
     "interval": "60",
@@ -74,15 +66,9 @@
   "backlight": {
     "format": "{percent}%  "
   },
-  "backlight/slider": {
-    "min": "5",
-    "max": "80",
-    "orientation": "horizontal",
-    "backlight": "amdgpu_bl2"
-  },
   "wireplumber": {
-    "max-volume": "100",
-    "scroll-step": "0.5",
+    "max-volume": 100,
+    "scroll-step": 0.5,
     "format": "{volume}% {icon}",
     "format-muted": "",
     "format-icons": [" "," "," "], 
@@ -93,8 +79,8 @@
     }
   },
   "tray": {
-    "icon-size": "20",
-    "spacing": "4",
+    "icon-size": 18,
+    "spacing": 9,
     "show-passive-items": true
   },
   // modules-center
@@ -108,23 +94,25 @@
       "4": ["eDP-2"],
       "5": ["eDP-2"],
       "6": ["eDP-2"],
-      "7": ["eDP-2"]
+      "7": ["eDP-2"],
+      "8": ["eDP-2"]
     },
     "format": "{icon}",
     "format-icons": {
-      "1": " ",
+      "1": "",
       "2": "",
-      "3": " ",
+      "3": "",
       "4": "",
       "5": "",
-      "6": " ",
-      "7": " "
+      "6": "",
+      "7": "",
+      "8": ""
     }
   },
 // potentially replace backlight/slider with standard backlight module and add scrolling response
 // modules_left
   "clock": {
-    "interval": "1",
+    "interval": 1,
     "format": "  {:%I:%M %p}",
     "tooltip-format": "{:%r %a %b %d %Y}",
     "timezone": "America/New_York",
@@ -135,7 +123,7 @@
   },
   "sway/window": {
     "format": "  {title}",
-    "max-length": "40",
+    "max-length": 40,
     "on-click": "focus",
     "rewrite": {
       "(.*)Mozilla Firefox": "  Firefox",
@@ -146,7 +134,7 @@
   "mpris": {
     "format": "  {dynamic}",
     "player": "tidal-hifi",
-    "interval": "60",
+    "interval": 10,
     "dynamic-order": [
       "title",
       "artist",
@@ -157,6 +145,6 @@
       "artist",
       "title"
     ],
-    "dynamic-len": "10"
+    "dynamic-len": 80
   }
 }
