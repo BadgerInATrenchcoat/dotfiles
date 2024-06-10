@@ -1,6 +1,7 @@
 # Sway Dotfiles
 
 These are the dotfiles for my Sway + Arch Linux system. The system primarily carries a nord/nord-adjacent theme, with a slightly more lenient approach taken for select elements like Waybar. 
+This project is still a work-in-progress. Certain applications--most notably dunst--are certainly not ideal, but lack any suitable alternatives that I could find. In the case of Dunst, SwayNotificationCenter (SwayNC) would likely be the best replacement, but is bloated with over a dozen dependencies--many of those with their own dependencies--meaning that it would install over two dozen packges by the end of it.   
 
 ## Dependencies
 
