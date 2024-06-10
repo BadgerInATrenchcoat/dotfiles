@@ -128,7 +128,9 @@
     "rewrite": {
       "(.*)Mozilla Firefox": "  Firefox",
       "(.*)Tidal(.*)": "  Tidal",
-      "(.*)foot": "  Terminal"
+      "(.*)foot": "  Terminal",
+      "(.*)KeePass": "  KeePass",
+      "(.*)KeePassXC": "  KeePassXC"
     }
   },
   "mpris": {

@@ -1,3 +1,9 @@
+@define-color nord-bg #293241;
+@define-color nord-fg #e0fbfc;
+@define-color nord-red #d1655e;
+@define-color textshadow #98c1d9;
+@define-color nord-red-alt #e02000;
+
 * {
   border: none; 
   font-family: "JetBrains Mono", "Font Awesome 6 Free", "Font Awesome 6 Brands", "Font Awesome v4 Compatibility", Arial;
@@ -5,9 +11,13 @@
   min-height: 0px;
   border-radius: 14px;
 }
+
+
 window#waybar {
   background-color: transparent;;
 }
+
+
 #clock, 
 #mpris,
 #privacy, 
@@ -19,10 +29,11 @@ window#waybar {
 #tray,
 #battery {
   padding: 0px 12px;
-  background-color: #293241;
-  color: #e0fbfc;
+  background-color: @nord-bg;
+  color: @nord-fg;
   text-shadow: 0px 0px 2px #98c1d9; 
 }
+
 window#waybar.empty #window {
   padding: 0px; 
   margin: 0px;
@@ -31,73 +42,64 @@ window#waybar.empty #window {
   min-width: 0px;
   font-size: 0px;
 }
+
 #network.disconnected {
-  color: #d1655e;
+  color: @nord-red;
 }
+
 #workspaces {
   min-height: 30px;
   border-style: solid;
-  background-color: #293241;
-} 
+  background-color: @nord-bg;
+}
+ 
 #workspaces button { 
-  color: #e0fbfc;
+  color: @nord-fg;
   min-width: 24px;
   margin: 0px 0px;
   padding: 0 16px;
   text-shadow: 0px 0px 2px #98c1d9;
 }
+
 #workspaces button.visible {
   border-style: solid;
-  border-color: #293241;
+  border-color: @nord-bg;
   background-color: #4c566a;
   min-width: 16px;
   padding: 0px 20px;
 }
+
 #workspaces button:hover {
   background: #364050;
   box-shadow: none;
 }
+
 #workspaces button.visible:hover {
   background: #596479;
   box-shadow: none;
 }
+
 #battery.full {
   color: #3b9953;
 }
+
 #battery.high {
   color: #abcd32;
 }
+
 #battery.medium {
   color: #f9de00;
 }
+
 #battery.warning {
   color: #f98106;
 }
+
 #battery.critical {
-  background-color: #e02000;
+  background-color: @nord-red-alt;
 }
 
-#backlight-slider {
-  padding: 0px 6px;
-}
-#backlight-slider trough {
-  background-color: #293241;
-  min-height: 34px;
-  min-width: 100px;
-}
-#backlight-slider slider {
-  background-color: #3d5a80;
-  min-height: 0px;
-  margin: 0px 0px;
-}
-#backlight-slider highlight {
-  margin: 4px 4px;
-  background-color: #98c1d9;
-  min-width: 0px;
-  min-height: 18px;
-  border-radius: 10px;
-}
 #wireplumber.muted {
-  color: #d1655e;
-  text-shadow: 0px 0px 2px #e02000; 
+  color: @nord-red;
+  text-shadow: 0px 0px 2px @nord-red-alt; 
 }
