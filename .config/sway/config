@@ -8,6 +8,8 @@ set $mod Mod4
 bar {
 	swaybar_command waybar
 }
+# Spawn Dunst on Sway start for notifications
+exec dunst
 # Set screen resolution and wallpaper
 output eDP-2 mode 2880x1800 pos 0 0 scale 1.5 bg ~/Pictures/.wallpapers/atsea.png fill
 # Basic navigation
@@ -61,6 +63,8 @@ bindsym Menu+Home exec playerctl previous
 bindsym Menu+Prior exec playerctl play
 bindsym Menu+Next exec playerctl pause
 bindsym Menu+End exec playerctl next
+## Hide Waybar with Mod+Shift+W 
+bindsym $mod+Shift+w exec killall -SIGUSR1 waybar
 ## END CUSTOM ##
 
 
@@ -130,8 +134,6 @@ set $term foot
     bindsym $mod+6 workspace number 6
     bindsym $mod+7 workspace number 7
     bindsym $mod+8 workspace number 8
-    bindsym $mod+9 workspace number 9
-    bindsym $mod+0 workspace number 10
     # Move focused container to workspace
     bindsym $mod+Shift+1 move container to workspace number 1
     bindsym $mod+Shift+2 move container to workspace number 2
@@ -141,10 +143,6 @@ set $term foot
     bindsym $mod+Shift+6 move container to workspace number 6
     bindsym $mod+Shift+7 move container to workspace number 7
     bindsym $mod+Shift+8 move container to workspace number 8
-    bindsym $mod+Shift+9 move container to workspace number 9
-    bindsym $mod+Shift+0 move container to workspace number 10
-    # Note: workspaces can have any name you want, not just numbers.
-    # We just use 1-10 as the default.
 #
 # Layout stuff:
 #
