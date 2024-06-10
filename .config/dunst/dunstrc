@@ -1,0 +1,74 @@
+[global]
+	# Set layer to overlay for proper fullscreen appearance in Wayland
+	layer = overlay
+
+	# Set the notification window to appear on the monitor that contains the currently focused window.
+	follow = keyboard
+	
+	# Notification window dimensions
+	width = (0, 350)
+	height = 350
+
+	origin = top-right
+
+	offset = 3x1
+
+	# Show five notifications and replace any further ones with a notification that they are waiting to be shown. 
+	notification_limit = 6
+	indicate_hidden = yes
+	
+	# Add minimal progress bar
+	progress_bar = true
+	progress_bar_horizontal_alignment = center
+	progress_bar_height = 10
+	progress_bar_min_width = 150 
+	progress_bar_max_width = 150
+	
+	# Set notifications to not timeout if user has been inactive for over sixty seconds
+	idle_threshold = 60
+
+	corner_radius = 14
+
+	frame_width = 0
+
+	font = "JetBrains Mono 9"
+
+	padding = 10
+	horizontal_padding = 16
+
+	sort = urgency_descending
+
+	markup = full
+	format = "<b><u>%a - %s</u></b>\n%b"
+
+	alignment = left
+
+	stack_duplicates = true
+	hide_duplicate_count = false
+
+	icon_position = left
+	min_icon_size = 0
+	max_icon_size = 32
+	text_icon_padding = 10
+
+	transparency = 20
+
+	separator_height = 0
+	gap_size = 4
+
+	history_length = 10
+[urgency_low]
+	background = "#293241"
+	foreground = "#e0fbfc"
+	timeout = 10
+
+[urgency_normal]
+	background = "#293241"
+	foreground = "#e0fbfc"
+	timeout = 10
+
+[urgency_critical]
+	background = "#293241"
+	foreground = "#bf616a"
+	timeout = 0
+	new_icon = /usr/share/icons/Tela-circle-nord-dark/scalable@2x/apps/com.github.timecraft.notifier.svg
