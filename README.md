@@ -16,7 +16,7 @@ Intent on keeping a minimal installation, third party dependencies have been kep
 The only notable package deviation is ranger, which--as of now, at least--must be ranger-git from the AUR instead of the standard ranger package from the Arch repositories.  This is due to the implimentation of sixel, the only image preview method that seems to work on Wayland + Foot.
 
 ## One-Line Installation
-The following command will clone this repository and use stow to link all included files to their intended destinations. While I intend to eventually adapt this command to handle dependencies, it will not currently.    
+The following command will clone this repository and use stow to link all included files to their intended destinations. While I intend to eventually adapt this command to handle dependencies, it will not currently. Additionally, this command does not handle resolution of device name changes.  This will most notably be a problem for display devices for Sway's output, brightness control, and more. This may be eventually built in, but due to Sway's strange handling of variables it seems unlikely to be even possible, much less reliable. 
 ```
 cd $HOME && git clone https://github.com/pika-colony/dotfiles && stow . 
 ```
