@@ -3,6 +3,13 @@
 These are the dotfiles for my Sway + Arch Linux system. The system primarily carries a nord/nord-adjacent theme, with a slightly more lenient approach taken for select elements like Waybar. 
 This project is still a work-in-progress. Certain applications--most notably dunst--are certainly not ideal, but lack any suitable alternatives that I could find. In the case of Dunst, SwayNotificationCenter (SwayNC) would likely be the best replacement, but is bloated with over a dozen dependencies--many of those with their own dependencies--meaning that it would install over two dozen packges by the end of it.   
 
+## Images
+
+[](https://files.catbox.moe/u67w1m.png)
+[](https://files.catbox.moe/fcwmc0.png)
+[](https://files.catbox.moe/qw80e6.png)
+[](https://files.catbox.moe/z70xjw.png)
+
 ## Dependencies
 
 Intent on keeping a minimal installation, third party dependencies have been kept to a minimum. This means that most relevant dependencies should be installed with the configured packages themselves. I have included a one-line command to add all dotfiles from this repo to your system. Eventually I intend to have it handle dependency resolution / package installation as well.  
@@ -15,5 +22,5 @@ cd $HOME && git clone https://github.com/pika-colony/dotfiles && stow .
 ```
 
 ## Credits
-Kickstart.nvim: https://github.com/nvim-lua/kickstart.nvim
+Kickstart.nvim: https://github.com/nvim-lua/kickstart.nvim  
 Nord Nvim Theme: https://github.com/shaunsingh/nord.nvim
