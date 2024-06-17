@@ -5,10 +5,10 @@ This project is still a work-in-progress. Certain applications--most notably dun
 
 ## Images
 
-[](https://files.catbox.moe/u67w1m.png)
-[](https://files.catbox.moe/fcwmc0.png)
-[](https://files.catbox.moe/qw80e6.png)
-[](https://files.catbox.moe/z70xjw.png)
+![Overview](https://files.catbox.moe/u67w1m.png)
+![Wofi](https://files.catbox.moe/fcwmc0.png)
+![Waylogout](https://files.catbox.moe/qw80e6.png)
+![Swaylock](https://files.catbox.moe/z70xjw.png)
 
 ## Dependencies
 
