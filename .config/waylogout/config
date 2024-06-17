@@ -1,0 +1,25 @@
+hide-cancel
+screenshots
+
+font="Baloo 2"
+fade-in=.35
+font="Font Awesome 6 Free"
+effect-blur=4x2
+
+indicator-thickness=6
+indicator-separation=512
+indicator-radius=80
+
+ring-color=364050
+inside-color=293241
+text-color=e0fbfc
+line-color=364050
+ring-selection-color=4c566a
+inside-selection-color=4c566a
+line-selection-color=4c566a
+text-selection-color=e0fbfc
+
+lock-command="swaylock -e -f -F -r -K -l -i $HOME/Pictures/.wallpapers/wave.png -C $HOME/.config/swaylock/config"
+logout-command="swaymsg exit"
+reboot-command="systemctl reboot"
+poweroff-command="systemctl poweroff"
