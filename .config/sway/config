@@ -32,7 +32,7 @@
 # Visual
 
     # Set screen resolution and wallpaper
-    output eDP-2 mode 2880x1800 pos 0 0 scale 1.5 bg ~/Pictures/.wallpapers/atsea.png fill
+    output eDP-1 mode 2880x1800 pos 0 0 scale 1.5 bg ~/Pictures/.wallpapers/atsea.png fill
 
     # Change bar to waybar
     bar {
@@ -86,10 +86,12 @@
 # Key bindings 
 
     # System controls
-
+	# Bind power button to logout prompt 
+	bindsym XF86PowerOff exec waylogout -C $HOME/.config/waylogout/config
+	
 	# Screen Brightness
-	bindsym XF86MonBrightnessUp exec brightnessctl --device=amdgpu_bl2 set +2% 
-	bindsym XF86MonBrightnessDown exec brightnessctl --device=amdgpu_bl2 set 2%- 
+	bindsym XF86MonBrightnessUp exec brightnessctl --device=amdgpu_bl1 set +2% 
+	bindsym XF86MonBrightnessDown exec brightnessctl --device=amdgpu_bl1 set 2%- 
 
 	# Keyboard Backlight
 	bindsym XF86KbdBrightnessUp exec brightnessctl --device=asus::kbd_backlight set +1
