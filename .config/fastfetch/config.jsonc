@@ -5,7 +5,7 @@
     "os",
     "packages",
     "shell",
-    "display",
+//    "display",
     "wm",
     "font",
     "terminal",
