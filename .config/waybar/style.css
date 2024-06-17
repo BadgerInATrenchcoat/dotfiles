@@ -2,7 +2,7 @@
 @define-color nord-fg #e0fbfc;
 @define-color nord-red #d1655e;
 @define-color textshadow #98c1d9;
-@define-color nord-red-alt #e02000;
+@define-color nord-red-alt #f98106;
 
 * {
   border: none; 
@@ -27,7 +27,8 @@ window#waybar {
 #window,
 #wireplumber, 
 #tray,
-#battery {
+#battery,
+#custom-waylogout {
   padding: 0px 12px;
   background-color: @nord-bg;
   color: @nord-fg;
@@ -100,6 +101,11 @@ window#waybar.empty #window {
 }
 
 #wireplumber.muted {
+  color: @nord-red;
+  text-shadow: 0px 0px 2px @nord-red-alt; 
+}
+
+#custom-waylogout:hover {
   color: @nord-red;
   text-shadow: 0px 0px 2px @nord-red-alt; 
 }
