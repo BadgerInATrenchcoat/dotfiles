@@ -1,4 +1,5 @@
 # Variables
+    
     # Set mod to Windows/logo key
     set $mod Mod4
 
@@ -15,7 +16,7 @@
     set $menu wofi -S drun -l top -y 10 -W 600 -H 300 | xargs swaymsg exec --
 
 # Autoruns
-
+    
     # Spawn Dunst on Sway start for notifications
     exec dunst
 
@@ -24,7 +25,7 @@
 
     # Screen idle + Screensaver
     exec swayidle -w \
-	timeout 60 'brightnessctl --device=amdgpu_bl2 -s && brightnessctl --device=amdgpu_bl2 set 5%' resume 'brightnessctl --device=amdgpu_bl2 -r' \
+	timeout 60 'brightnessctl --device=amdgpu_bl1 -s && brightnessctl --device=amdgpu_bl1 set 5%' resume 'brightnessctl --device=amdgpu_bl1 -r' \
 	timeout 120 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
 	timeout 180 'swaylock -e -f -F -r -K -l -i $HOME/Pictures/.wallpapers/wave.png -C $HOME/.config/swaylock/config' \
 	before-sleep 'swaylock -e -f -F -r -K -l -i $HOME/Pictures/.wallpapers/wave.png -C $HOME/.config/swaylock/config'
@@ -50,8 +51,8 @@
 
     # Floating Windows
     floating_modifier $mod normal
-    for_window [app_id="Tor Browser"] floating enable
-    for_window [app_id="Mullvad Browser"] floating enable
+    for_window [class="Tor Browser"] floating enable
+    for_window [class="Mullvad Browser"] floating enable
 
     # Resizing containers:
     mode "resize" {
