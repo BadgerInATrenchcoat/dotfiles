@@ -15,6 +15,9 @@
     # Set wofi as the default application launcher
     set $menu wofi -S drun -l top -y 10 -W 600 -H 300 | xargs swaymsg exec --
 
+# Sourced files/directories
+    include /etc/sway/config.d/*
+
 # Autoruns
     
     # Spawn Dunst on Sway start for notifications
@@ -29,7 +32,9 @@
 	timeout 120 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
 	timeout 180 'swaylock -e -f -F -r -K -l -i $HOME/Pictures/.wallpapers/wave.png -C $HOME/.config/swaylock/config' \
 	before-sleep 'swaylock -e -f -F -r -K -l -i $HOME/Pictures/.wallpapers/wave.png -C $HOME/.config/swaylock/config'
-
+    
+    # Variable imports for xdg-desktop-portal-wlr
+    exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 # Visual
 
     # Set screen resolution and wallpaper
@@ -75,7 +80,10 @@
 	bindsym Return mode "default"
 	bindsym Escape mode "default"
     }
-
+    # Persistent window transparency (used for scratchpad)
+    #for_window [app_id=""] opacity 0.80
+    # Scratchpad applications
+    #for_window [app_id=""] floating enable, resize set width 80 ppt height 80 ppt, move position center, move scratchpad
 # Devices
 
     # Input
@@ -209,7 +217,7 @@
     # Scratchpad
 
 	# Move window to scratchpapd
-	bindsym $mod+Shift+minus move scratchpad
+	bindsym $mod+Shift+minus floating enable, resize set width 80 ppt height 80 ppt, move position center, move scratchpad
 
 	# Show scratchpad
-	bindsym $mod+minus scratchpad show
+	bindsym $mod+minus scratchpad show 
