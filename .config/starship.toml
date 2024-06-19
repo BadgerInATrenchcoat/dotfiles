@@ -29,7 +29,11 @@ orange = '#F67400'
 # Directory
 
 # OS
-
+[os.symbols]
+Arch = "󰣇"
+Debian = "󰣚"
+Fedora = "󰣛"
+openSUSE = " "
 
 # Time
 
