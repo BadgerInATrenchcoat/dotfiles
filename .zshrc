@@ -1,8 +1,8 @@
 # Colors
 autoload -U colors && colors
 # Default prompt and ranger prompt
-PS1="%B%{$fg[cyan]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%&%~%{$fg[cyan]%}]%{$reset_color%}$%b "
-  if [ -n "$RANGER_LEVEL" ]; then export PS1="%B%{$fg[cyan]%}[%{$fg[red]%}Ranger %{$fg[yellow]%}%&%~%{$fg[cyan]%}]%{$reset_color%}$%b "; fi
+#PS1="%B%{$fg[cyan]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%&%~%{$fg[cyan]%}]%{$reset_color%}$%b "
+#  if [ -n "$RANGER_LEVEL" ]; then export PS1="%B%{$fg[cyan]%}[%{$fg[red]%}Ranger %{$fg[yellow]%}%&%~%{$fg[cyan]%}]%{$reset_color%}$%b "; fi
 # history
 HISTSIZE=1000000
 SAVEHIST=100000
@@ -70,3 +70,5 @@ function precmd() {
   fi
 }
 
+# Add Starship Prompt
+eval "$(starship init zsh)"
