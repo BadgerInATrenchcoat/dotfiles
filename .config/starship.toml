@@ -1,0 +1,83 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Inserts a blank line between shell prompts
+add_newline = true
+
+# How long to scan file directories (in milliseconds)
+scan_timeout = 10
+
+# Prompt
+palette = 'nord_dark'
+
+# Color definitions 
+[palettes.nord_dark]
+black  = '#3b4252'
+red = '#bf616a'
+green = '#a3be8c'
+yellow = '#ebcb8b'
+blue = '#81a1c1'
+magenta = '#b48ead'
+cyan = '#88c0d0'
+white = '#e5e9f0'
+orange = '#F67400'
+# NOTE: 
+#  Certain nord-compliant colors, like orange, are replaced with more vibrant versions for visibility.
+#  The original colors variants can be enabled below.
+#  orange = '#d08770'
+
+# Directory
+
+# OS
+
+
+# Time
+
+
+# Command Time
+[cmd_duration]
+min_time = 1000 
+format = '[$duration]($style)'
+style = 'bold fg:green'
+# show_notifications = 'true'
+#min_time_to_notify = '60000'
+# Status
+
+
+# Package Version
+[package]
+format = "[📦 $version](bold #a3be8c) "
+version_format = 'v${raw}'
+
+# Add style and project version when in Rust directory
+[rust]
+format = '[🦀 $version]($style)'
+style = 'fg:orange'
+
+# 
+[git_branch]
+format = 'on [󰘬 $branch(:remote_branch)]($style) '
+#truncation_length = '16'
+truncation_symbol = '...'
+style = 'bold purple'
+
+# [git_commit]
+# 
+# [git_state]
+# 
+# [git_metrics]
+ 
+[git_status]
+format = '[\[$all_status$ahead_behind\]]($style)'
+conflicted = '󱓌 '
+ahead = '󱓊 '
+behind = '󱓋 '
+diverged = '󰃻 '
+up_to_date = '󰸞 '
+untracked = '󰦀 '
+stashed = ' '
+modified = '󱇬 '
+staged = '󰝒 '
+renamed = '󱇧 '
+deleted = '󱪡 '
+style = 'bold red'
