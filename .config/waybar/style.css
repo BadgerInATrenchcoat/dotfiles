@@ -1,8 +1,8 @@
-@define-color nord-bg #293241;
-@define-color nord-fg #e0fbfc;
-@define-color nord-red #d1655e;
+@define-color bg #293241;
+@define-color fg #e0fbfc;
+@define-color red #d1655e;
 @define-color textshadow #98c1d9;
-@define-color nord-red-alt #f98106;
+@define-color red-alt #f98106;
 
 * {
   border: none; 
@@ -30,8 +30,8 @@ window#waybar {
 #battery,
 #custom-waylogout {
   padding: 0px 12px;
-  background-color: @nord-bg;
-  color: @nord-fg;
+  background-color: @bg;
+  color: @fg;
   text-shadow: 0px 0px 2px #98c1d9; 
 }
 
@@ -45,17 +45,17 @@ window#waybar.empty #window {
 }
 
 #network.disconnected {
-  color: @nord-red;
+  color: @red;
 }
 
 #workspaces {
   min-height: 30px;
   border-style: solid;
-  background-color: @nord-bg;
+  background-color: @bg;
 }
  
 #workspaces button { 
-  color: @nord-fg;
+  color: @fg;
   min-width: 24px;
   margin: 0px 0px;
   padding: 0 16px;
@@ -64,7 +64,7 @@ window#waybar.empty #window {
 
 #workspaces button.visible {
   border-style: solid;
-  border-color: @nord-bg;
+  border-color: @bg;
   background-color: #4c566a;
   min-width: 16px;
   padding: 0px 20px;
@@ -97,15 +97,15 @@ window#waybar.empty #window {
 }
 
 #battery.critical {
-  background-color: @nord-red-alt;
+  background-color: @red-alt;
 }
 
 #wireplumber.muted {
-  color: @nord-red;
-  text-shadow: 0px 0px 2px @nord-red-alt; 
+  color: @red;
+  text-shadow: 0px 0px 2px @red-alt; 
 }
 
 #custom-waylogout:hover {
-  color: @nord-red;
-  text-shadow: 0px 0px 2px @nord-red-alt; 
+  color: @red;
+  text-shadow: 0px 0px 2px @red-alt; 
 }
