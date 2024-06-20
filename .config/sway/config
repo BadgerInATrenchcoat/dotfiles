@@ -35,6 +35,12 @@
     
     # Variable imports for xdg-desktop-portal-wlr
     exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+
+# Functionality 
+    
+    # Disable dragging windows while in tiling mode
+    tiling_drag disable
+
 # Visual
 
     # Set screen resolution and wallpaper
@@ -47,12 +53,14 @@
 
     # Set window gaps
     gaps inner 10
+    smart_gaps on
 
-    # Remove window titlebars
+    # Enable borders
     default_border pixel 2
     exec border pixel 2
     client.focused #5e81ac #5e81ac #5e81ac
     client.unfocused #4c556a #4c556a #4c556a
+    hide_edge_borders smart
 
     # Floating Windows
     floating_modifier $mod normal
@@ -90,6 +98,8 @@
     input "2362:12305:ASUP1208:00_093A:3011_Touchpad" {
       tap enabled
       natural_scroll enabled
+      dwt enabled
+      drag disabled
     }
 
 # Key bindings 
