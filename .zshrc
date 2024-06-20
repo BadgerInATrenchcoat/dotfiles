@@ -33,7 +33,7 @@ source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring
 #alias "code"="code --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform=wayland --ozone-platform-hint=auto"
 #alias "tidal-hifi"="tidal-hifi --ozone-platform=wayland --enable-features=TouchpadOverscrollHistoryNavigation"
 #alias "signal"="signal-desktop --enable-features=UseOzonePlatform --ozone-platform=wayland"
-alias tput="trashy put"
+alias t="trashy put"
 alias tls="trashy list"
 alias tres="trashy restore -r "
 alias cat="bat --tabs 2"
