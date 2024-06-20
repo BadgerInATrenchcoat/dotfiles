@@ -140,7 +140,7 @@
   },
   "mpris": {
     "format": "  {dynamic}",
-    "player": "tidal-hifi",
+    "player": "HighTide",
     "interval": 10,
     "dynamic-order": [
       "title",
