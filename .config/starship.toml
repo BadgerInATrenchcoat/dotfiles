@@ -26,26 +26,37 @@ orange = '#F67400'
 #  The original colors variants can be enabled below.
 #  orange = '#d08770'
 
+# Username
+[username]
+show_always = true
+format = '[\[](bold blue) [$user]($style) [ ]($style) '
+style_user = 'bold cyan' 
+
 # Directory
+[directory]
+truncation_length = 5
+truncation_symbol = '.../'
+truncate_to_repo = false
+format = '[$path]($style)[$read_only]($read_only_style) [\]](bold blue) '
+style = 'bold cyan'
+read_only = ''
+home_symbol = '~'
 
 # OS
 [os.symbols]
-Arch = "󰣇"
-Debian = "󰣚"
-Fedora = "󰣛"
-openSUSE = " "
-
-# Time
-
+Arch = '󰣇'
+Debian = '󰣚'
+Fedora = '󰣛'
+openSUSE = ' '
 
 # Command Time
 [cmd_duration]
-min_time = 1000 
+min_time = 1000
 format = '[$duration]($style)'
 style = 'bold fg:green'
 # show_notifications = 'true'
 #min_time_to_notify = '60000'
-# Status
+# Exit Status
 
 
 # Package Version
