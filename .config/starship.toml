@@ -8,6 +8,7 @@ add_newline = true
 scan_timeout = 10
 
 # Prompt
+format = "$directory $git_branch $git_status\n[](fg:blue)[$os ](bg:blue fg:#222222)[](fg:blue) "
 palette = 'nord_dark'
 
 # Color definitions 
@@ -29,7 +30,7 @@ orange = '#F67400'
 # Username
 [username]
 show_always = true
-format = '[\[](bold blue) [$user]($style) [ ]($style) '
+format = '[$user]($style) [ ]($style) '
 style_user = 'bold cyan' 
 
 # Directory
@@ -37,12 +38,26 @@ style_user = 'bold cyan'
 truncation_length = 5
 truncation_symbol = '.../'
 truncate_to_repo = false
-format = '[$path]($style)[$read_only]($read_only_style) [\]](bold blue) '
-style = 'bold cyan'
+format = '[\[]($style) [$path]($style)[$read_only]($read_only_style) [\]]($style)'
+style = 'bold blue'
 read_only = ''
 home_symbol = '~'
 
+[directory.substitutions]
+"~/Documents" = " "
+"~/Downloads" = " "
+"~/Music" = " "
+"~/Pictures" = " "
+"~/Videos" = " " 
+"~/.config" = " "
+"~" = " " 
+
 # OS
+[os]
+format = "$symbol"
+style = "bold blue"
+disabled = false
+
 [os.symbols]
 Arch = '󰣇'
 Debian = '󰣚'
@@ -71,7 +86,7 @@ style = 'fg:orange'
 
 # 
 [git_branch]
-format = '[\[ 󰘬 $branch(:remote_branch)]($style) '
+format = '[\[ 󰘬 $branch(:remote_branch)]($style)'
 #truncation_length = '16'
 truncation_symbol = '...'
 style = 'bold purple'
