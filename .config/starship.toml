@@ -107,16 +107,16 @@ style = 'bold purple'
 # [git_metrics]
  
 [git_status]
-format = "[$all_status$ahead_behind \\]]($style)"
-conflicted = '[- 󱓌 ](red)'
-ahead = '[- 󱓊 ](blue)'
-behind = '[- 󱓋 ](blue)'
-diverged = '[- 󰃻 ](blue)'
-up_to_date = '[- 󰸞 ](green)'
-untracked = '[- 󰦀 ](red)'
-stashed = '[-  ](blue)'
-modified = '[- 󱇬 ](green)'
-staged = '[- 󰝒 ](yellow)'
-renamed = '[- 󱇧 ](purple)'
-deleted = '[- 󱪡 ](red)'
+format = "[- $all_status$ahead_behind\\]]($style)"
+conflicted = '[󱓌 ](red)'
+ahead = '[󱓊 ](blue)'
+behind = '[󱓋 ](blue)'
+diverged = '[󰃻 ](blue)'
+up_to_date = '[󰸞 ](green)'
+untracked = '[󰦀 ](red)'
+stashed = '[ ](blue)'
+modified = '[󱇬 ](green)'
+staged = '[󰝒 ](yellow)'
+renamed = '[󱇧 ](purple)'
+deleted = '[󱪡 ](red)'
 style = 'bold purple'
