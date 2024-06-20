@@ -8,9 +8,17 @@ add_newline = true
 scan_timeout = 10
 
 # Prompt
-format = "$directory $git_branch $git_status\n[](fg:blue)[$os ](bg:blue fg:#222222)[](fg:blue) "
+ format = """
+ [\\[](bold fg:blue) $directory [\\]](bold fg:blue) $git_branch $git_status $package $rust
+ [░▒▓](fg:blue)[ $os ](bg:blue fg:#222222)[](fg:blue) """
+# format = """
+# [](fg:blue)$directory[](fg:blue) $git_branch $git_status 
+# [](fg:blue)[ $os ](bg:blue fg:#222222)[](fg:blue) 
+# """
 palette = 'nord_dark'
-
+#success_symbol = "[▓▒░](fg:black)"
+#error_symbol = "[▓▒░](fg:red)"
+#vimcmd_symbol = "[▓▒░](fg:blue)"
 # Color definitions 
 [palettes.nord_dark]
 black  = '#3b4252'
@@ -38,7 +46,7 @@ style_user = 'bold cyan'
 truncation_length = 5
 truncation_symbol = '.../'
 truncate_to_repo = false
-format = '[\[]($style) [$path]($style)[$read_only]($read_only_style) [\]]($style)'
+format = '[$path]($style)[$read_only]($read_only_style)'
 style = 'bold blue'
 read_only = ''
 home_symbol = '~'
@@ -76,17 +84,18 @@ style = 'bold fg:green'
 
 # Package Version
 [package]
-format = "[📦 $version](bold fg:green) "
+format = "[\\[ 󰏖 $version \\]]($style)"
+style = 'fg:yellow'
 version_format = 'v${raw}'
 
 # Add style and project version when in Rust directory
 [rust]
-format = '[🦀 $version]($style)'
+format = "[\\[  $version \\]]($style)"
 style = 'fg:orange'
 
 # 
 [git_branch]
-format = '[\[ 󰘬 $branch(:remote_branch)]($style)'
+format = "[\\[ 󰘬 $branch(:remote_branch)]($style)"
 #truncation_length = '16'
 truncation_symbol = '...'
 style = 'bold purple'
@@ -98,7 +107,7 @@ style = 'bold purple'
 # [git_metrics]
  
 [git_status]
-format = '[$all_status$ahead_behind\]]($style)'
+format = "[$all_status$ahead_behind \\]]($style)"
 conflicted = '[- 󱓌 ](red)'
 ahead = '[- 󱓊 ](blue)'
 behind = '[- 󱓋 ](blue)'
