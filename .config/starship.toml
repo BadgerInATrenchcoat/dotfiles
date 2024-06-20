@@ -11,14 +11,8 @@ scan_timeout = 10
  format = """
  [\\[](bold fg:blue) $directory [\\]](bold fg:blue) $git_branch $git_status $package $rust
  [░▒▓](fg:blue)[ $os ](bg:blue fg:#222222)[](fg:blue) """
-# format = """
-# [](fg:blue)$directory[](fg:blue) $git_branch $git_status 
-# [](fg:blue)[ $os ](bg:blue fg:#222222)[](fg:blue) 
-# """
-palette = 'nord_dark'
-#success_symbol = "[▓▒░](fg:black)"
-#error_symbol = "[▓▒░](fg:red)"
-#vimcmd_symbol = "[▓▒░](fg:blue)"
+ right_format = "$cmd_duration"
+  
 # Color definitions 
 [palettes.nord_dark]
 black  = '#3b4252'
@@ -74,9 +68,9 @@ openSUSE = ' '
 
 # Command Time
 [cmd_duration]
-min_time = 1000
-format = '[$duration]($style)'
-style = 'bold fg:green'
+min_time = 0
+format = '[ $duration]($style)'
+style = 'dimmed bold fg:green'
 # show_notifications = 'true'
 #min_time_to_notify = '60000'
 # Exit Status
