@@ -56,16 +56,24 @@
     smart_gaps on
 
     # Enable borders
-    default_border pixel 2
-    exec border pixel 2
-    client.focused #5e81ac #5e81ac #5e81ac
-    client.unfocused #4c556a #4c556a #4c556a
+    default_border pixel 2 
+   
+    #exec border pixel 2
+    client.focused #5e81ac #5e81ac #e0fbfc
+    client.unfocused #4c556a #4c556a #e0fbfc
     hide_edge_borders smart
-
+   
+    # Enable titles on floating windows
+    title_align center
+    font "pango:Jet Brains Mono 10"
+    for_window [title="."] title_format "<b>%title</b>"
     # Floating Windows
     floating_modifier $mod normal
     for_window [class="Tor Browser"] floating enable
     for_window [class="Mullvad Browser"] floating enable
+    for_window [app_id="io.github.nokse22.HighTide"] floating enable
+    for_window [app_id="firefox"] layout tabbed enable
+    for_window [app_id="brave-browser"] layout tabbed enable
 
     # Resizing containers:
     mode "resize" {
@@ -91,7 +99,7 @@
     # Persistent window transparency (used for scratchpad)
     for_window [app_id="io.github.nokse22.HighTide"] opacity 0.70
     # Scratchpad applications
-    for_window [app_id="io.github.nokse22.HighTide"] floating enable, resize set width 80 ppt height 80 ppt, move position center, move scratchpad
+    for_window [app_id="io.github.nokse22.HighTide"] resize set width 80 ppt height 80 ppt, move position center, move scratchpad
 # Devices
 
     # Input
