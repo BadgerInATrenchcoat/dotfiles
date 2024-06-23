@@ -13,11 +13,6 @@
 }
 
 
-window#waybar {
-  background-color: transparent;;
-}
-
-
 #clock, 
 #mpris,
 #privacy, 
@@ -70,14 +65,20 @@ window#waybar.empty #window {
   padding: 0px 20px;
 }
 
+#workspaces button.empty {
+  color: @fg;
+  min-width: 24px;
+  margin: 0px 0px;
+  padding: 0 16px;
+  text-shadow: 0px 0px 2px #98c1d9;
+}
+
 #workspaces button:hover {
   background: #364050;
-  box-shadow: none;
 }
 
 #workspaces button.visible:hover {
   background: #596479;
-  box-shadow: none;
 }
 
 #battery.full {
@@ -109,3 +110,17 @@ window#waybar.empty #window {
   color: @red;
   text-shadow: 0px 0px 2px @red-alt; 
 }
+ 
+/* Islands */
+window#waybar {
+  background-color: transparent;
+}
+
+/* Solid */
+/*window#waybar {
+  background-color: @bg;
+  border-radius: 0px;
+}*/
+
+
+
