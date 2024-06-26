@@ -1,8 +1,6 @@
 # Colors
 autoload -U colors && colors
-# Default prompt and ranger prompt
-#PS1="%B%{$fg[cyan]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%&%~%{$fg[cyan]%}]%{$reset_color%}$%b "
-#  if [ -n "$RANGER_LEVEL" ]; then export PS1="%B%{$fg[cyan]%}[%{$fg[red]%}Ranger %{$fg[yellow]%}%&%~%{$fg[cyan]%}]%{$reset_color%}$%b "; fi
+
 # history
 HISTSIZE=1000000
 SAVEHIST=100000
@@ -25,19 +23,19 @@ bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
 # Plugins
-source  /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
-
+source $HOME/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $HOME/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $HOME/.config/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+source $HOME/.config/zsh/plugins/fzf/fzf.zsh
 # Aliases
-#alias "code"="code --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform=wayland --ozone-platform-hint=auto"
-#alias "tidal-hifi"="tidal-hifi --ozone-platform=wayland --enable-features=TouchpadOverscrollHistoryNavigation"
-#alias "signal"="signal-desktop --enable-features=UseOzonePlatform --ozone-platform=wayland"
+# Wayland flags for electron / chromium applications "--enable-features=UseOzonePlatform --ozone-platform=wayland"
 alias t="trashy put"
 alias tls="trashy list"
 alias tres="trashy restore -r "
 alias cat="bat --tabs 2"
 alias ll="ls -al"
+alias mv="mv -i"
+alias cp="cp -i"
 ## Colorize common commands
 alias diff="diff --color=auto"
 alias ls="ls --color"
@@ -45,6 +43,10 @@ alias grep="grep --color=auto"
 alias ip="ip -color=auto"
 alias zrl="source $HOME/.zshrc && source $HOME/.zshenv"
 alias m="neomutt"
+alias emacsclient="emacsclient -c a 'nvim'"
 
 # Add Starship Prompt
 eval "$(starship init zsh)"
+
+# Path Additions
+export PATH="$HOME/.config/emacs/bin:/usr/local/lib/:$PATH"
