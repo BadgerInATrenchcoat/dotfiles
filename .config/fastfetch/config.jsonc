@@ -74,12 +74,7 @@
     },
     {
         "type": "shell",
-        "key": "├",
-        "keyColor": "green"
-    },
-    {
-        "type": "font",
-        "key": "╰",
+        "key": "╰",
         "keyColor": "green"
     },
     "break",
