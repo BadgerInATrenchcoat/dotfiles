@@ -28,7 +28,7 @@
 
     # Screen idle + Screensaver
     exec swayidle -w \
-	timeout 60 'brightnessctl --device=amdgpu_bl1 -s && brightnessctl --device=amdgpu_bl1 set 5%' resume 'brightnessctl --device=amdgpu_bl1 -r' \
+	timeout 60 'brightnessctl --class="backlight" -s && brightnessctl --class="backlight" set 5%' resume 'brightnessctl --class="backlight" -r' \
 	timeout 120 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
 	timeout 180 'swaylock -e -f -F -r -K -l -i $HOME/Pictures/.wallpapers/wave.png -C $HOME/.config/swaylock/config' \
 	before-sleep 'swaylock -e -f -F -r -K -l -i $HOME/Pictures/.wallpapers/wave.png -C $HOME/.config/swaylock/config'
@@ -119,8 +119,8 @@
 	bindsym XF86PowerOff exec waylogout -C $HOME/.config/waylogout/config
 	
 	# Screen Brightness
-	bindsym XF86MonBrightnessUp exec brightnessctl --device=amdgpu_bl1 set +2% 
-	bindsym XF86MonBrightnessDown exec brightnessctl --device=amdgpu_bl1 set 2%- 
+	bindsym XF86MonBrightnessUp exec brightnessctl --class=brightness set +2%
+	bindsym XF86MonBrightnessDown exec brightnessctl --class=brightness set 2%-
 
 	# Keyboard Backlight
 	bindsym XF86KbdBrightnessUp exec brightnessctl --device=asus::kbd_backlight set +1
