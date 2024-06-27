@@ -28,7 +28,7 @@
 
     # Screen idle + Screensaver
     exec swayidle -w \
-	timeout 60 'brightnessctl --class="backlight" -s && brightnessctl --class="backlight" set 5%' resume 'brightnessctl --class="backlight" -r' \
+	timeout 60 'brightnessctl --class=backlight -s && brightnessctl --class=backlight set 5%' resume 'brightnessctl --class=backlight -r' \
 	timeout 120 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
 	timeout 180 'swaylock -e -f -F -r -K -l -i $HOME/Pictures/.wallpapers/wave.png -C $HOME/.config/swaylock/config' \
 	before-sleep 'swaylock -e -f -F -r -K -l -i $HOME/Pictures/.wallpapers/wave.png -C $HOME/.config/swaylock/config'
@@ -200,6 +200,7 @@
 	bindsym $mod+6 workspace number 6
 	bindsym $mod+7 workspace number 7
 	bindsym $mod+8 workspace number 8
+	bindsym $mod+9 workspace number 9
 
 	# Move focused container to workspace
 	bindsym $mod+Shift+1 move container to workspace number 1
@@ -210,6 +211,7 @@
 	bindsym $mod+Shift+6 move container to workspace number 6
 	bindsym $mod+Shift+7 move container to workspace number 7
 	bindsym $mod+Shift+8 move container to workspace number 8
+	bindsym $mod+Shift+9 move container to workspace number 9
 
     # Layout
 
