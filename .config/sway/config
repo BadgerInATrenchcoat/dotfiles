@@ -30,7 +30,8 @@
     exec swayidle -w \
 	timeout 60 'brightnessctl --class=backlight -s && brightnessctl --class=backlight set 5%' resume 'brightnessctl --class=backlight -r' \
 	timeout 120 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-	timeout 180 'swaylock -e -f -F -r -K -l -i $HOME/Pictures/.wallpapers/wave.png -C $HOME/.config/swaylock/config' \
+	timeout 150 'swaylock -e -f -F -r -K -l -i $HOME/Pictures/.wallpapers/wave.png -C $HOME/.config/swaylock/config' \
+	timeout 180 'systemctl suspend' \
 	before-sleep 'swaylock -e -f -F -r -K -l -i $HOME/Pictures/.wallpapers/wave.png -C $HOME/.config/swaylock/config'
     
     # Variable imports for xdg-desktop-portal-wlr
