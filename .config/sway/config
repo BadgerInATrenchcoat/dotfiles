@@ -120,8 +120,8 @@
 	bindsym XF86PowerOff exec waylogout -C $HOME/.config/waylogout/config
 	
 	# Screen Brightness
-	bindsym XF86MonBrightnessUp exec brightnessctl --class=brightness set +2%
-	bindsym XF86MonBrightnessDown exec brightnessctl --class=brightness set 2%-
+	bindsym XF86MonBrightnessUp exec brightnessctl --class=backlight set +2%
+	bindsym XF86MonBrightnessDown exec brightnessctl --class=backlight set 2%-
 
 	# Keyboard Backlight
 	bindsym XF86KbdBrightnessUp exec brightnessctl --device=asus::kbd_backlight set +1
