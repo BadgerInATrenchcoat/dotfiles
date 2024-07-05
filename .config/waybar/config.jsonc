@@ -4,11 +4,11 @@
   "height": 36,
   
   // Islands
-  "margin": 3,
-  "spacing": 6,
+  // "margin": 3,
+  // "spacing": 6,
   // Solid
-  //"margin": 0,
-  //"spacing": 2,
+  "margin": 0,
+  "spacing": 2,
   
   "exclusive": true,
   "fixed-center": true,

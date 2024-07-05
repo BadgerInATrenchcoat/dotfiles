@@ -117,10 +117,16 @@ window#waybar {
 }
 
 /* Solid */
-/*window#waybar {
+window#waybar {
   background-color: @bg;
   border-radius: 0px;
-}*/
+}
 
-
-
+#workspaces button,
+#workspaces button.empty,
+#workspaces button.visible {
+  min-width: 20px;
+  margin: 0px 2px;
+  padding: 0px 10px;
+  border-radius: 0px;
+}

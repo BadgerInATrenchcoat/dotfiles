@@ -47,7 +47,8 @@
 # Visual
 
     # Set screen resolution and wallpaper
-    output eDP-1 mode 2880x1800 pos 0 0 scale 1.5 bg ~/Pictures/.wallpapers/atsea.png fill
+    output * mode 2880x1800 pos 0 0 scale 1.5 bg ~/Pictures/.wallpapers/atsea.png fill
+    #output eDP-1 mode 1920x1200 pos 0 0 scale 1.0 bg ~/Pictures/.wallpapers/atsea.png fill
 
     # Change bar to waybar
     bar {
@@ -74,6 +75,7 @@
     floating_modifier $mod normal
     for_window [class="Tor Browser"] floating enable
     for_window [class="Mullvad Browser"] floating enable
+    for_window [app_id="Windscribe"] floating enable
     #for_window [app_id="io.github.nokse22.HighTide"] floating enable
     for_window [app_id="firefox"] layout tabbed enable
     for_window [app_id="brave-browser"] layout tabbed enable
@@ -109,7 +111,7 @@
     input "2362:12305:ASUP1208:00_093A:3011_Touchpad" {
       tap enabled
       natural_scroll enabled
-      dwt enabled
+      dwt disabled
       drag disabled
     }
 
