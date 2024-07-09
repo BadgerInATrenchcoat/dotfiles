@@ -52,7 +52,7 @@
     "interface": "wlan0",
     "interval": 120,
     "family": "ipv4",
-    "format-wifi": "{essid} {signaldBm}dBm  ",
+    "format-wifi": "{essid} {signaldBm}dBm ",
     "format-disconnected": "Disconnected"
   },
   "battery": {
@@ -60,24 +60,22 @@
     "interval": "60",
     "format": "{capacity}% {icon}",
     "format-time": "{H}h {m}m {M}min",
-    "format-icons": [" "," "," "," "," "],
+    "format-icons": ["","","","",""],
     "states": {
-      "full": 100,
-      "high": 80,
+      "high": 100,
       "medium": 60,
-      "warning": 40,
-      "critical": 20
+      "low": 20
     }
   },
   "backlight": {
-    "format": "{percent}%  "
+    "format": "{percent}% "
   },
   "wireplumber": {
     "max-volume": 100,
     "scroll-step": 0.5,
     "format": "{volume}% {icon}",
     "format-muted": "",
-    "format-icons": [" "," "," "], 
+    "format-icons": ["","",""], 
     "states": {
       "high": 100,
       "medium": 60,
@@ -124,7 +122,7 @@
 // modules_left
   "clock": {
     "interval": 1,
-    "format": "  {:%I:%M %p}",
+    "format": " {:%I:%M %p}",
     "tooltip-format": "{:%r %a %b %d %Y}",
     "timezone": "America/New_York",
     "calendar": {
@@ -133,7 +131,7 @@
     }
   },
   "sway/window": {
-    "format": "  {title}",
+    "format": "  {title}",
     "max-length": 40,
     "on-click": "focus",
     "rewrite": {

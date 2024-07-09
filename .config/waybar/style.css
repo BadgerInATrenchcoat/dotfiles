@@ -1,8 +1,13 @@
-@define-color bg #293241;
-@define-color fg #e0fbfc;
-@define-color red #d1655e;
-@define-color textshadow #98c1d9;
-@define-color red-alt #f98106;
+/* @define-color bg #293241; */
+/* @define-color fg #e0fbfc; */
+/* @define-color red #d1655e; */
+/* @define-color textshadow #98c1d9; */
+/* @define-color red-alt #f98106; */
+
+@define-color bg #2E3440;
+@define-color fg #d8dee9;
+@define-color primaryRed #f26d78;
+@define-color red-alt #0f131a;
 
 * {
   border: none; 
@@ -22,12 +27,18 @@
 #window,
 #wireplumber, 
 #tray,
-#battery,
-#custom-waylogout {
-  padding: 0px 12px;
+#battery {
+  padding: 0px 8px;
   background-color: @bg;
   color: @fg;
-  text-shadow: 0px 0px 2px #98c1d9; 
+}
+
+#clock {
+  color: #5e81ac;
+}
+
+#window {
+  color: #81a1c1;
 }
 
 window#waybar.empty #window {
@@ -39,8 +50,16 @@ window#waybar.empty #window {
   font-size: 0px;
 }
 
+#network {
+  color: #88c0d0;
+}
+
 #network.disconnected {
-  color: @red;
+  color: @primaryRed;
+}
+
+#backlight {
+  color: #d08770;
 }
 
 #workspaces {
@@ -50,11 +69,11 @@ window#waybar.empty #window {
 }
  
 #workspaces button { 
-  color: @fg;
+  color: #d8dee9;
   min-width: 24px;
   margin: 0px 0px;
   padding: 0 16px;
-  text-shadow: 0px 0px 2px #98c1d9;
+  box-shadow: inset 0px -2px 0px 0px #8fbcbb;
 }
 
 #workspaces button.visible {
@@ -70,51 +89,47 @@ window#waybar.empty #window {
   min-width: 24px;
   margin: 0px 0px;
   padding: 0 16px;
-  text-shadow: 0px 0px 2px #98c1d9;
+  box-shadow: inset 0px 0px 0px 0px;
 }
 
-#workspaces button:hover {
-  background: #364050;
-}
-
+#workspaces button:hover,
 #workspaces button.visible:hover {
-  background: #596479;
-}
-
-#battery.full {
-  color: #3b9953;
+  background: #6c7380;
 }
 
 #battery.high {
-  color: #abcd32;
+  color: #a3be8c;
 }
 
 #battery.medium {
-  color: #f9de00;
+  color: #ebcb8b;
 }
 
-#battery.warning {
-  color: #f98106;
+#battery.low {
+  color: #bf616a;
 }
 
-#battery.critical {
-  background-color: @red-alt;
+#wireplumber {
+  color: #d08770;
 }
 
 #wireplumber.muted {
-  color: @red;
-  text-shadow: 0px 0px 2px @red-alt; 
+  color: @primaryRed;
 }
+#custom-waylogout {
+  padding: 0px 18px 0px 10px;
+  background-color: @bg;
+  color: #bf616a;
 
+}
 #custom-waylogout:hover {
-  color: @red;
-  text-shadow: 0px 0px 2px @red-alt; 
+  color: @primaryRed;
 }
  
 /* Islands */
-window#waybar {
-  background-color: transparent;
-}
+/* window#waybar { */
+/*   background-color: transparent; */
+/* } */
 
 /* Solid */
 window#waybar {
