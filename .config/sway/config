@@ -15,9 +15,6 @@
     # Set wofi as the default application launcher
     set $menu wofi -S drun -l top -y 10 -W 600 -H 300 | xargs swaymsg exec --
 
-# Sourced files/directories
-    include /etc/sway/config.d/*
-
 # Autoruns
     
     # Spawn Dunst on Sway start for notifications
@@ -39,6 +36,7 @@
 
     # Emacs Daemon
     exec /usr/bin/emacs --daemon
+    
 # Functionality 
     
     # Disable dragging windows while in tiling mode
@@ -47,8 +45,9 @@
 # Visual
 
     # Set screen resolution and wallpaper
-    output * mode 2880x1800 pos 0 0 scale 1.5 bg ~/Pictures/.wallpapers/atsea.png fill
-    #output eDP-1 mode 1920x1200 pos 0 0 scale 1.0 bg ~/Pictures/.wallpapers/atsea.png fill
+    output * mode 2880x1800@120Hz scale 1.5 adaptive_sync on bg ~/Pictures/.wallpapers/foggyTrees.jpg fill
+    #output * mode 1920x1200@60Hz scale 1.0 adaptive_sync on bg ~/Pictures/.wallpapers/foggyTrees.jpg fill
+    
 
     # Change bar to waybar
     bar {
@@ -122,8 +121,8 @@
 	bindsym XF86PowerOff exec waylogout -C $HOME/.config/waylogout/config
 	
 	# Screen Brightness
-	bindsym XF86MonBrightnessUp exec brightnessctl --class=backlight set +2%
-	bindsym XF86MonBrightnessDown exec brightnessctl --class=backlight set 2%-
+	bindsym XF86MonBrightnessUp exec brightnessctl --class=backlight set +1%
+	bindsym XF86MonBrightnessDown exec brightnessctl --class=backlight set 1%-
 
 	# Keyboard Backlight
 	bindsym XF86KbdBrightnessUp exec brightnessctl --device=asus::kbd_backlight set +1
@@ -164,7 +163,8 @@
 	bindsym $mod+Shift+c reload
 
 	# Exit sway (logs you out of your Wayland session)
-	bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+	#bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+	bindsym $mod+Shift+e exec waylogout -C $HOME/.config/waylogout/config
 
     # Movement
 
