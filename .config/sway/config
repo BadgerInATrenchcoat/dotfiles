@@ -100,6 +100,8 @@
 	bindsym Return mode "default"
 	bindsym Escape mode "default"
     }
+    #
+    bindsym Caps_Lock BackSpace
     # Persistent window transparency (used for scratchpad)
     #for_window [app_id="io.github.nokse22.HighTide"] opacity 0.70
     # Scratchpad applications

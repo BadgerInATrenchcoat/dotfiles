@@ -1,12 +1,7 @@
 {
   "layer": "top",
-  "position": "top",
+  "position": "bottom",
   "height": 36,
-  
-  // Islands
-  // "margin": 3,
-  // "spacing": 6,
-  // Solid
   "margin": 0,
   "spacing": 2,
   
@@ -152,10 +147,10 @@
       "length"
     ],
     "dynamic-importance-order": [
-      "length",
+      "title",
       "artist",
-      "title"
+      "length"
     ],
-    "dynamic-len": 80
+    "dynamic-len": 55
   }
 }
