@@ -8,6 +8,7 @@ effect-blur=4x2
 
 indicator-thickness=6
 indicator-separation=512
+#indicator-separation=256
 indicator-radius=80
 
 ring-color=364050
