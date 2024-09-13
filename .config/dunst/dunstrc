@@ -6,12 +6,12 @@
 	follow = keyboard
 	
 	# Notification window dimensions
-	width = (0, 350)
-	height = 350
+	width = 350
+	height = 400
 
-	origin = top-right
+	origin = bottom-right
 
-	offset = 3x1
+	offset = 4x4
 
 	# Show five notifications and replace any further ones with a notification that they are waiting to be shown. 
 	notification_limit = 6
@@ -27,14 +27,14 @@
 	# Set notifications to not timeout if user has been inactive for over sixty seconds
 	idle_threshold = 60
 
-	corner_radius = 14
+	corner_radius = 0
 
-	frame_width = 0
+	frame_width = 2
 
 	font = "JetBrains Mono 9"
 
-	padding = 10
-	horizontal_padding = 16
+	padding = 8
+	horizontal_padding = 12
 
 	sort = urgency_descending
 
@@ -57,18 +57,22 @@
 	gap_size = 4
 
 	history_length = 10
+
 [urgency_low]
-	background = "#293241"
-	foreground = "#e0fbfc"
+	background = "#2e3440"
+	foreground = "#a3be8c"
+	frame_color = "#a3be8c"
 	timeout = 10
 
 [urgency_normal]
-	background = "#293241"
-	foreground = "#e0fbfc"
+	background = "#2e3440"
+	foreground = "#ebcb8b"
+	frame_color = "#d8dee9"
 	timeout = 10
 
 [urgency_critical]
-	background = "#293241"
+	background = "#bf616a"
 	foreground = "#bf616a"
+	frame_color = "#bf616a"
 	timeout = 0
 	new_icon = /usr/share/icons/Tela-circle-nord-dark/scalable@2x/apps/com.github.timecraft.notifier.svg

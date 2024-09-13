@@ -27,15 +27,15 @@
     exec swayidle -w \
 	timeout 60 'brightnessctl --class=backlight -s && brightnessctl --class=backlight set 5%' resume 'brightnessctl --class=backlight -r' \
 	timeout 120 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-	timeout 150 'swaylock -e -f -F -r -K -l -i $HOME/Pictures/.wallpapers/wave.png -C $HOME/.config/swaylock/config' \
+	timeout 150 'swaylock --indicator-idle-visible e -f -F -r -K -l -i $HOME/Pictures/.wallpapers/wave.png -C $HOME/.config/swaylock/config' \
 	timeout 180 'systemctl suspend' \
-	before-sleep 'swaylock -e -f -F -r -K -l -i $HOME/Pictures/.wallpapers/wave.png -C $HOME/.config/swaylock/config'
+	before-sleep 'swaylock --indicator-idle-visible -e -f -F -r -K -l -i $HOME/Pictures/.wallpapers/wave.png -C $HOME/.config/swaylock/config'
     
     # Variable imports for xdg-desktop-portal-wlr
     exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 
     # Emacs Daemon
-    exec /usr/bin/emacs --daemon
+    exec emacs --daemon
     
 # Functionality 
     

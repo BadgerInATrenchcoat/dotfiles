@@ -1,7 +1,7 @@
 hide-cancel
 screenshots
 
-font="Baloo 2"
+#font="Baloo 2"
 fade-in=.35
 font="Font Awesome 6 Free"
 effect-blur=4x2
