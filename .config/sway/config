@@ -72,12 +72,13 @@
     for_window [title="."] title_format "<b>%title</b>"
     # Floating Windows
     floating_modifier $mod normal
-    for_window [class="Tor Browser"] floating enable
+    for_window [app_id="Tor Browser"] floating enable
     for_window [class="Mullvad Browser"] floating enable
     for_window [app_id="Windscribe"] floating enable
+    for_window [title="Extension: (Kagi Search for Firefox)*"] floating enable, resize set width 30 ppt height 70 ppt, move position right
     #for_window [app_id="io.github.nokse22.HighTide"] floating enable
-    for_window [app_id="firefox"] layout tabbed enable
-    for_window [app_id="brave-browser"] layout tabbed enable
+    #for_window [app_id="firefox"] layout tabbed enable
+    #for_window [app_id="brave-browser"] layout tabbed enable
 
     # Resizing containers:
     mode "resize" {
@@ -123,8 +124,8 @@
 	bindsym XF86PowerOff exec waylogout -C $HOME/.config/waylogout/config
 	
 	# Screen Brightness
-	bindsym XF86MonBrightnessUp exec brightnessctl --class=backlight set +1%
-	bindsym XF86MonBrightnessDown exec brightnessctl --class=backlight set 1%-
+	bindsym XF86MonBrightnessUp exec lux -a 1%
+	bindsym XF86MonBrightnessDown exec lux -m 2 -s 1%
 
 	# Keyboard Backlight
 	bindsym XF86KbdBrightnessUp exec brightnessctl --device=asus::kbd_backlight set +1
