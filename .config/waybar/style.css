@@ -50,6 +50,10 @@ window#waybar.empty #window {
   font-size: 0px;
 }
 
+#mpris {
+  color: #88c0d0
+}
+
 #network {
   color: #88c0d0;
 }
