@@ -248,4 +248,5 @@
 	bindsym $mod+Shift+minus floating enable, resize set width 80 ppt height 80 ppt, move position center, move scratchpad
 
 	# Show scratchpad
-	bindsym $mod+minus scratchpad show 
+	bindsym $mod+minus scratchpad show;
+    bindsym $mod+equal scratchpad show; scratchpad show
