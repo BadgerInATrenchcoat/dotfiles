@@ -7,7 +7,7 @@
          "height": 20
      }, 
   "display": {
-      "separator": " —— "
+      "separator": "  —— "
   },
   "modules": [
     "break",
@@ -22,12 +22,12 @@
     },
     {
         "type": "os",
-        "key": "├󰣇",
+        "key": "├",
         "keyColor": "blue"
     },
     {
         "type": "kernel",
-        "key": "├",
+        "key": "├",
         "keyColor": "blue"
     },
     {
@@ -53,7 +53,12 @@
     },
     {
         "type": "memory",
-        "key": "╰",
+        "key": "├",
+        "keyColor": "magenta"
+    },
+    {
+        "type": "battery",
+        "key": "╰",
         "keyColor": "magenta"
     },
     "break",
