@@ -62,6 +62,14 @@ window#waybar.empty #window {
   color: @primaryRed;
 }
 
+#custom-notification {
+  font-family: "JetBrains Mono", "Font Awesome 6 Free Solid";
+  color: #88c0d0;
+}
+#custom-notification.notification {
+  color: #bf616a
+}
+
 #backlight {
   color: #d08770;
 }

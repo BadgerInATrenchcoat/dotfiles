@@ -18,18 +18,29 @@
 # Autoruns
     
     # Spawn Dunst on Sway start for notifications
-    exec dunst
+    #exec dunst
+
+    # Fixes a weird issue where actual brightness will be much higher than it should be until adjusted at least once manually.
+    exec lux -S $(lux -g)
+
+    # SwayNC
+    exec swaync
+    # Toggle control center
+    bindsym $mod+Shift+n exec swaync-client -t -sw
 
     # Initialize GNOME Keyring
     exec --no-startup-id gnome-keyring-daemon --start --components=pkcs11,secrets,ssh
 
+    #Execute kde polkit
+    exec /usr/lib/polkit-kde-authentication-agent-1
+
     # Screen idle + Screensaver
     exec swayidle -w \
-	timeout 60 'brightnessctl --class=backlight -s && brightnessctl --class=backlight set 5%' resume 'brightnessctl --class=backlight -r' \
-	timeout 120 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-	timeout 150 'swaylock --indicator-idle-visible e -f -F -r -K -l -i $HOME/Pictures/.wallpapers/wave.png -C $HOME/.config/swaylock/config' \
-	timeout 180 'systemctl suspend' \
-	before-sleep 'swaylock --indicator-idle-visible -e -f -F -r -K -l -i $HOME/Pictures/.wallpapers/wave.png -C $HOME/.config/swaylock/config'
+	     timeout 60 'brightnessctl --class=backlight -s && brightnessctl --class=backlight set 5%' resume 'brightnessctl --class=backlight -r' \
+	     timeout 120 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+	     timeout 150 'swaylock --indicator-idle-visible e -f -F -r -K -l -i $HOME/Pictures/.wallpapers/wave.png -C $HOME/.config/swaylock/config' \
+	     timeout 180 'systemctl suspend' \
+	     before-sleep 'swaylock --indicator-idle-visible -e -f -F -r -K -l -i $HOME/Pictures/.wallpapers/wave.png -C $HOME/.config/swaylock/config'
     
     # Variable imports for xdg-desktop-portal-wlr
     exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
