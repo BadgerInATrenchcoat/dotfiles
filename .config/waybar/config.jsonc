@@ -54,7 +54,11 @@
   "battery": {
     "bat": "BAT1",
     "interval": 60,
-    "format": "{capacity}% {icon}",
+    "tooltip": true,
+    "tooltip-format": "Time remaining: {time} | {power:4.2f}W",
+    "format-charging": "{capacity}% ",
+    "format-discharging": "{capacity}% {icon}",
+    "format": "{capacity}% ",
     "format-time": "{H}h {m}m {M}min",
     "format-icons": ["","","","",""],
     "states": {
@@ -75,7 +79,7 @@
     "states": {
       "high": 100,
       "medium": 60,
-      "low": 20, 
+      "low": 20
     }
   },
   "tray": {

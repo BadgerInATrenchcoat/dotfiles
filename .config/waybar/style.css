@@ -17,6 +17,13 @@
   border-radius: 14px;
 }
 
+tooltip {
+     border-radius: 0px;
+     background-color: @bg;
+     padding: 0px 0px;
+     margin: 0px 0px;
+     color: @fg
+}
 
 #clock, 
 #mpris,
@@ -27,7 +34,8 @@
 #window,
 #wireplumber, 
 #tray,
-#battery {
+#battery,
+#custom-notification {
   padding: 0px 8px;
   background-color: @bg;
   color: @fg;
