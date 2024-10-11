@@ -41,6 +41,7 @@ alias grep="grep --color=auto"
 alias ip="ip -color=auto"
 alias zrl="source $HOME/.zshrc && source $HOME/.zshenv"
 alias emacsclient="emacsclient -c a 'nvim'"
+alias bootwin="efibootmgr --bootnext 0001"
 
 # Add Starship Prompt
 eval "$(starship init zsh)"

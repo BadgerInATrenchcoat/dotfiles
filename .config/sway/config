@@ -56,8 +56,11 @@
 # Visual
 
     # Set screen resolution and wallpaper
-    output * mode 2880x1800@120Hz scale 1.5 adaptive_sync on bg ~/Pictures/.wallpapers/foggyTrees.jpg fill
-    #output * mode 1920x1200@60Hz scale 1.0 adaptive_sync on bg ~/Pictures/.wallpapers/foggyTrees.jpg fill
+    #output eDP-1 mode 2880x1800@120.000Hz render_bit_depth 10 scale 1.5 adaptive_sync on bg $HOME/Pictures/.wallpapers/mountainBG.png fill
+    #output eDP-1 mode 1920x1200@120.000Hz render_bit_depth 10 scale 1.0 bg $HOME/Pictures/.wallpapers/mountainBG.png fill
+    output eDP-1 mode 2880x1800@60.000Hz render_bit_depth 8 scale 1.5 bg $HOME/Pictures/.wallpapers/mountainBG.png fill
+    #output eDP-1 disable
+    #output DP-2 mode 1920x1080@240Hz render_bit_depth 8 scale_filter linear subpixel rgb scale 1 adaptive_sync on bg $HOME/Pictures/.wallpapers/mountainBG.png fill
     
 
     # Change bar to waybar
@@ -158,6 +161,7 @@
 
 	# Screenshot
 	bindsym $mod+Tab exec grim -g "$(slurp)" - | swappy -f -
+	bindsym $mod+Shift+Tab exec normcap -m parse -c "#81a1c1"
 
 	# Hide Waybar with Mod+Shift+W 
 	bindsym $mod+Shift+w exec killall -SIGUSR1 waybar
