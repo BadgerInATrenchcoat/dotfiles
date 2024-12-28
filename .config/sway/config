@@ -20,16 +20,16 @@
     # Spawn Dunst on Sway start for notifications
     #exec dunst
 
-    # Fixes a weird issue where actual brightness will be much higher than it should be until adjusted at least once manually.
-    exec lux -S $(lux -g)
-
     # SwayNC
     exec swaync
     # Toggle control center
     bindsym $mod+Shift+n exec swaync-client -t -sw
 
+    # Autostart KeepassXC
+    exec keepassxc
+    
     # Initialize GNOME Keyring
-    exec --no-startup-id gnome-keyring-daemon --start --components=pkcs11,secrets,ssh
+    #exec --no-startup-id gnome-keyring-daemon --start --components=pkcs11,secrets,ssh
 
     #Execute kde polkit
     exec /usr/lib/polkit-kde-authentication-agent-1
