@@ -19,4 +19,4 @@ export QT_STYLE_OVERRIDE="kvantum"
 export GTK_THEME="Pop-nord-dark"
 
 # Path
-export PATH="$HOME/.config/emacs/bin:/usr/local/lib/:$PATH"
+export PATH="$HOME/.config/emacs/bin:/usr/local/lib/:/home/user/.local/bin:$PATH"

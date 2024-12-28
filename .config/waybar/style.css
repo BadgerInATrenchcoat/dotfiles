@@ -93,13 +93,15 @@ window#waybar.empty #window {
   min-width: 24px;
   margin: 0px 0px;
   padding: 0 16px;
-  box-shadow: inset 0px -2px 0px 0px #8fbcbb;
+  /* box-shadow: inset 0px -2px 0px 0px #8fbcbb; */
+  box-shadow: inset 0px 2px 0px 0px #8fbcbb;
 }
 
 #workspaces button.visible {
   border-style: solid;
   border-color: @bg;
-  background-color: #4c566a;
+  /* background-color: #4c566a; */
+  background-color: #3b4252;
   min-width: 16px;
   padding: 0px 20px;
 }
@@ -114,7 +116,7 @@ window#waybar.empty #window {
 
 #workspaces button:hover,
 #workspaces button.visible:hover {
-  background: #6c7380;
+  background: #434c5e;
 }
 
 #battery.high {
