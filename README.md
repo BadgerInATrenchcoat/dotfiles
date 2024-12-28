@@ -18,7 +18,7 @@ The only notable package deviation is ranger, which--as of now, at least--must b
 ## One-Line Installation
 The following command will clone this repository and use stow to link all included files to their intended destinations. While I intend to eventually adapt this command to handle dependencies, it will not currently. Additionally, this command does not handle resolution of device name changes.  This will most notably be a problem for display devices for Sway's output, brightness control, and more. This may be eventually built in, but due to Sway's strange handling of variables it seems unlikely to be even possible, much less reliable. 
 ```
-cd $HOME && git clone https://github.com/pika-colony/dotfiles && stow . 
+cd $HOME && git clone https://github.com/BadgerInATrenchcoat/sway-dots.git && stow . 
 ```
 
 ## Credits
