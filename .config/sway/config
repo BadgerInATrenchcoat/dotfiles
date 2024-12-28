@@ -167,7 +167,7 @@
 	bindsym $mod+Shift+w exec killall -SIGUSR1 waybar
 
 	# Start a terminal
-	bindsym $mod+Return exec $term
+	bindsym $mod+Return exec $term 
 
 	# Kill focused window
 	bindsym $mod+Shift+q kill
@@ -182,7 +182,6 @@
 	bindsym $mod+Shift+c reload
 
 	# Exit sway (logs you out of your Wayland session)
-	#bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 	bindsym $mod+Shift+e exec waylogout -C $HOME/.config/waylogout/config
 
     # Movement
